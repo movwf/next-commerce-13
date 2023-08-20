@@ -57,7 +57,7 @@ function Footer() {
           <h3 className="font-bold">Top Categories</h3>
           {["Clothing", "Shoes", "Bags", "Beauty"].map((l) => (
             <li key={l} className="my-2 hover:underline">
-              <Link href="#">{l}</Link>
+              <Link href={`/${l.toLowerCase()}`}>{l}</Link>
             </li>
           ))}
         </ul>

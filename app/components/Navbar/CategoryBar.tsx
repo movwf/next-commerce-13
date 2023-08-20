@@ -8,10 +8,10 @@ function CategoryBar() {
         <Link href="#" className="py-2 px-4">
           Clothing
         </Link>
-        <Link href="#" className="py-2 px-4">
+        <Link href="/women/shoes" className="py-2 px-4">
           Shoes
         </Link>
-        <Link href="#" className="py-2 px-4">
+        <Link href="/women/beauty" className="py-2 px-4">
           Beauty
         </Link>
         <Link href="#" className="py-2 px-4">
