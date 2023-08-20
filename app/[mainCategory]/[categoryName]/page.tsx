@@ -10,7 +10,12 @@ function PLPPage() {
   return (
     <div className="flex flex-col justify-center items-center">
       <Navbar />
-      <Breadcrumb steps={[{ name: "Women" }, { name: "Shoes" }]} />
+      <Breadcrumb
+        steps={[
+          { name: "Women", url: "/women" },
+          { name: "Shoes", url: "/women/shoes" },
+        ]}
+      />
 
       <div className="w-full flex justify-center">
         <div className="w-4/5 flex flex-row">

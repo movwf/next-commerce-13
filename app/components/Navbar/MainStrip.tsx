@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import React from "react";
@@ -21,16 +20,18 @@ function MainStrip() {
       <div className="w-[80%] h-full flex justify-between">
         <div className="h-full flex">
           {Object.keys(mainCategories).map((cat) => (
-            <div
+            <a
               key={cat}
-              className={`h-full flex items-center hover:bg-yellow-500 px-3 cursor-pointer ${
-                path.substring(1) === cat ? "bg-gray-400 text-black" : ""
-              }`}
+              href={mainCategories[cat as CategoryKey].url}
             >
-              <Link href={mainCategories[cat as CategoryKey].url}>
+              <div
+                className={`h-full flex items-center hover:bg-yellow-500 px-3 cursor-pointer ${
+                  path.substring(1) === cat ? "bg-gray-400 text-black" : ""
+                }`}
+              >
                 {mainCategories[cat as CategoryKey].label}
-              </Link>
-            </div>
+              </div>
+            </a>
           ))}
         </div>
         <div className="h-full flex">
